@@ -31,6 +31,10 @@ public class PixelCamera : MonoBehaviour
     [SerializeField] 
     RawImage display;
 
+    [Header("Post Processing")]
+    [SerializeField]
+    Material material;
+
     private void Init()
     {
         renderCamera ??= GetComponent<Camera>();
@@ -51,6 +55,7 @@ public class PixelCamera : MonoBehaviour
         };
 
         renderCamera.targetTexture = renderTexture;
+        Graphics.Blit(renderTexture, material);
         display.texture = renderTexture;
     }
 
