@@ -31,7 +31,6 @@ Shader "Hidden/Selective/ChromaticAberration" {
             sampler2D _MainTex;
             sampler2D _SelectiveMap;
             float4 _MainTex_TexelSize;
-            float4 _SelectiveMap_TexelSize;
             bool _DebugMask;
             float2 _FocalOffset, _Radius;
             float _Hardness, _Intensity;

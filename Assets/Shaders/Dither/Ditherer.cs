@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ditherer : MonoBehaviour {
-    public Shader ditherShader;
-
+public class Ditherer : BaseShader {
     [Range(0.0f, 1.0f)]
     public float spread = 0.5f;
 
@@ -22,24 +20,13 @@ public class Ditherer : MonoBehaviour {
     public int downSamples = 0;
 
     public bool pointFilterDown = false;
-
-    private Material ditherMat;
     
-    void OnEnable() {
-        ditherMat = new Material(ditherShader);
-        ditherMat.hideFlags = HideFlags.HideAndDontSave;
-    }
-
-    void OnDisable() {
-        ditherMat = null;
-    }
-
-    void OnRenderImage(RenderTexture source, RenderTexture destination) {
-        ditherMat.SetFloat("_Spread", spread);
-        ditherMat.SetInt("_RedColorCount", redColorCount);
-        ditherMat.SetInt("_GreenColorCount", greenColorCount);
-        ditherMat.SetInt("_BlueColorCount", blueColorCount);
-        ditherMat.SetInt("_BayerLevel", bayerLevel);
+    public override void OnRenderImage(RenderTexture source, RenderTexture destination) {
+        shaderMaterial.SetFloat("_Spread", spread);
+        shaderMaterial.SetInt("_RedColorCount", redColorCount);
+        shaderMaterial.SetInt("_GreenColorCount", greenColorCount);
+        shaderMaterial.SetInt("_BlueColorCount", blueColorCount);
+        shaderMaterial.SetInt("_BayerLevel", bayerLevel);
 
         int width = source.width;
         int height = source.height;
@@ -58,7 +45,7 @@ public class Ditherer : MonoBehaviour {
             RenderTexture currentDestination = textures[i] = RenderTexture.GetTemporary(width, height, 0, source.format);
 
             if (pointFilterDown)
-                Graphics.Blit(currentSource, currentDestination, ditherMat, 1);
+                Graphics.Blit(currentSource, currentDestination, shaderMaterial, 1);
             else
                 Graphics.Blit(currentSource, currentDestination);
 
@@ -66,9 +53,9 @@ public class Ditherer : MonoBehaviour {
         }
 
         RenderTexture dither = RenderTexture.GetTemporary(width, height, 0, source.format);
-        Graphics.Blit(currentSource, dither, ditherMat, 0);
+        Graphics.Blit(currentSource, dither, shaderMaterial, 0);
 
-        Graphics.Blit(dither, destination, ditherMat, 1);
+        Graphics.Blit(dither, destination, shaderMaterial, 1);
         RenderTexture.ReleaseTemporary(dither);
         for (int i = 0; i < downSamples; ++i) {
             RenderTexture.ReleaseTemporary(textures[i]);

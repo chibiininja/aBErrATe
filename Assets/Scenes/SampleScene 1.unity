@@ -140,7 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a3e667354b4154f94458b6b3795e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ditherShader: {fileID: 4800000, guid: fd7bf0c490f45bf43be2456dd84a101f, type: 3}
+  shader: {fileID: 4800000, guid: fd7bf0c490f45bf43be2456dd84a101f, type: 3}
+  cam: {fileID: 0}
   spread: 0.15
   redColorCount: 3
   greenColorCount: 3
@@ -274,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743597651704331073, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 3743597651704331073, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -312,6 +313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Simple Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 3743597651704331078, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
+      propertyPath: newCam
+      value: 
+      objectReference: {fileID: 5565943205310284634, guid: 69024363c1ea9694c83593da8e382039, type: 3}
     - target: {fileID: 3743597651704331078, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: linkedPortal
       value: 
@@ -412,11 +417,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 82.87, y: -30, z: 0}
---- !u!1 &873508535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1404278934527749543, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
-  m_PrefabInstance: {fileID: 1476436121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &966124153
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743597651704331073, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 3743597651704331073, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -733,6 +733,10 @@ PrefabInstance:
       value: Simple Portal (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3743597651704331078, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
+      propertyPath: newCam
+      value: 
+      objectReference: {fileID: 5565943205310284634, guid: 9c50528a112cf3d46acd71ee3a84393e, type: 3}
+    - target: {fileID: 3743597651704331078, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}
       propertyPath: linkedPortal
       value: 
       objectReference: {fileID: 2125586706}
@@ -746,12 +750,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 911670510701075690, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 4800000, guid: 63d5153bc88421e49bc982ffb2d44b45, type: 3}
+    - target: {fileID: 911670510701075690, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1331861735301302680, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 4800000, guid: d92cc0f819893ca4a8fbb351dae87de1, type: 3}
+    - target: {fileID: 1331861735301302680, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1535381019623673784, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: m_Name
@@ -806,8 +818,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1662247539307503370, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 4800000, guid: fd7bf0c490f45bf43be2456dd84a101f, type: 3}
+    - target: {fileID: 1662247539307503370, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1662247539307503370, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: redColorCount
@@ -829,23 +845,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7719224195205387095, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7719224195205387095, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
-      propertyPath: m_RenderingPath
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7719224195205387095, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
-      propertyPath: near clip plane
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 7719224195205387095, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5975823374572400234, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
 --- !u!1 &1615322707 stripped
 GameObject:
@@ -864,7 +865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063cab6d2882a00498ead727e8a00695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postProcessingShader: {fileID: 4800000, guid: a7ee498f306f5544888cc8d773bdc558, type: 3}
+  shader: {fileID: 4800000, guid: a7ee498f306f5544888cc8d773bdc558, type: 3}
+  cam: {fileID: 0}
   exposure: {x: 1, y: 1, z: 1}
   temperature: 0
   tint: 0
@@ -885,7 +887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a3e667354b4154f94458b6b3795e1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ditherShader: {fileID: 4800000, guid: fd7bf0c490f45bf43be2456dd84a101f, type: 3}
+  shader: {fileID: 4800000, guid: fd7bf0c490f45bf43be2456dd84a101f, type: 3}
+  cam: {fileID: 0}
   spread: 0.15
   redColorCount: 3
   greenColorCount: 3
@@ -893,25 +896,6 @@ MonoBehaviour:
   bayerLevel: 0
   downSamples: 1
   pointFilterDown: 1
---- !u!114 &1801635329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873508535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51cbb919319eda941b2f4ec56a845ce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectiveAberration: {fileID: 4800000, guid: 059fd336daa11d44f900ebfae5869066, type: 3}
-  debugMask: 0
-  focalOffset: {x: 1, y: 1}
-  radius: {x: 1, y: 1}
-  hardness: 1
-  intensity: 3
-  channelOffsets: {x: 1, y: 0, z: -1}
 --- !u!114 &2125586706 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3743597651704331078, guid: ee8a8e23be2e4b141983d2a8708ad73a, type: 3}

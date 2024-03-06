@@ -12,6 +12,9 @@ public class Portal : MonoBehaviour {
     public float nearClipOffset = 0.05f;
     public float nearClipLimit = 0.2f;
 
+    [Header ("PostProcessing")]
+    public GameObject newCam;
+
     // Private variables
     RenderTexture viewTexture;
     Camera portalCam;
@@ -27,6 +30,14 @@ public class Portal : MonoBehaviour {
         trackedTravellers = new List<PortalTraveller> ();
         screenMeshFilter = screen.GetComponent<MeshFilter> ();
         screen.material.SetInt ("displayMask", 1);
+    }
+
+    void Update()
+    {
+        if (playerCam != Camera.main)
+        {
+            playerCam = Camera.main;
+        }
     }
 
     void LateUpdate () {
