@@ -12,10 +12,12 @@ GameObject:
   - component: {fileID: 3846920821058747818}
   - component: {fileID: 1289432024784046507}
   - component: {fileID: 1110960459461927009}
-  - component: {fileID: 5648557278984982304}
+  - component: {fileID: -8976753158589569870}
+  - component: {fileID: 490616527096034497}
+  - component: {fileID: 6738931743371044735}
   - component: {fileID: 9073240027745418972}
   m_Layer: 0
-  m_Name: BaseMain
+  m_Name: Red
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9e7e2e468c51f41ae1229e6e5b2aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5648557278984982304
+--- !u!114 &-8976753158589569870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +122,44 @@ MonoBehaviour:
   bayerLevel: 0
   downSamples: 1
   pointFilterDown: 1
+--- !u!114 &490616527096034497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565943205310284634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063cab6d2882a00498ead727e8a00695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 63d5153bc88421e49bc982ffb2d44b45, type: 3}
+  cam: {fileID: 0}
+  exposure: {x: 1, y: 1, z: 1}
+  temperature: 0
+  tint: 0
+  contrast: {x: 1, y: 1, z: 1}
+  linearMidPoint: {x: 0.5, y: 0.5, z: 0.5}
+  brightness: {x: 0, y: 0, z: 0}
+  colorFilter: {r: 1, g: 1, b: 1, a: 0}
+  saturation: {x: 0, y: 0, z: 0}
+--- !u!114 &6738931743371044735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565943205310284634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a78c6115c214d438374fb1cec7d2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: d92cc0f819893ca4a8fbb351dae87de1, type: 3}
+  cam: {fileID: 0}
+  colorPalette: {fileID: 2800000, guid: 213488218968d234db7d4ee1a6aeee56, type: 3}
+  invert: 0
 --- !u!114 &9073240027745418972
 MonoBehaviour:
   m_ObjectHideFlags: 0

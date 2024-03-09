@@ -115,7 +115,10 @@ public class FPSController : PortalTraveller {
 
     public override void Teleport (Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot) {
         Camera oldCam = cam;
-        cam = Instantiate(fromPortal.GetComponent<Portal>().newCam, transform, false).GetComponent<Camera>();
+        cam = Instantiate(fromPortal.GetComponent<Portal>().newCam, transform).GetComponent<Camera>();
+        cam.transform.rotation = oldCam.transform.rotation;
+        fromPortal.GetComponent<Portal>().UpdatePlayerCam(cam);
+        toPortal.GetComponent<Portal>().UpdatePlayerCam(cam);
         oldCam.enabled = false;
         Destroy(oldCam.gameObject);
 

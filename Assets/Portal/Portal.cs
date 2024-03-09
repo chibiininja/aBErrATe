@@ -258,6 +258,11 @@ public class Portal : MonoBehaviour {
 
     }
 
+    public void UpdatePlayerCam(Camera cam)
+    {
+        playerCam = cam;
+    }
+
     // Use custom projection matrix to align portal camera's near clip plane with the surface of the portal
     // Note that this affects precision of the depth buffer, which can cause issues with effects like screenspace AO
     void SetNearClipPlane () {
