@@ -8,3 +8,4 @@
 - Sebastian Lague's Coding Adventure: Portals \[[video](https://www.youtube.com/watch?v=cWpFZbjtSQg)\] \[[repository](https://github.com/SebLague/Portals)\]
 - Linden Reid's Tutorial on Command Buffers \[[tutorial](https://lindenreidblog.com/2018/09/13/using-command-buffers-in-unity-selective-bloom/)\]
   - Applying post processing effects to selective objects :)
+- Peer Play's Audio Visualizer Tutorial \[[tutorial](https://www.youtube.com/watch?v=5pmoP1ZOoNs&list=PL3POsQzaCw53p2tA6AWf7_AWgplskR0Vo)\]
