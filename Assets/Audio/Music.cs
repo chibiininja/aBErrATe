@@ -13,8 +13,8 @@ public class Music : MonoBehaviour
     private float linkedRadius = 5f;
     [SerializeField]
     private float offset = 1f;
-    [SerializeField, Range(0f, 1f)]
-    private float localVolumeAmplifier;
+    [Range(0f, 1f)]
+    public float localVolumeAmplifier;
     
     // Start is called before the first frame update
     void Start()

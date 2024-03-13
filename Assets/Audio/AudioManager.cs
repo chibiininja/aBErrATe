@@ -30,12 +30,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private GameObject[] sounds;
 
-    private void Start()
+    public void PlayStartMusic()
     {
-        if (startingMusic == null)
+        if (startingMusic == "")
             return;
         Music[] music = FindObjectsOfType<Music>();
-        System.Array.Find(music, track => track.gameObject.name == startingMusic).GetComponent<AudioSource>().volume = 1.0f;
+        Music startingTrack = System.Array.Find(music, track => track.gameObject.name == startingMusic);
+        startingTrack.GetComponent<AudioSource>().volume = 1.0f * startingTrack.localVolumeAmplifier * musicVolumeAmplifier;
     }
 
     public float Play(string name, Transform parent)
