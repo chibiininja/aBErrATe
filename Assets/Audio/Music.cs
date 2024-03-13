@@ -14,7 +14,7 @@ public class Music : MonoBehaviour
     [SerializeField]
     private float offset = 1f;
     [Range(0f, 1f)]
-    public float localVolumeAmplifier;
+    public float localVolumeAmplifier = 0.15f;
     
     // Start is called before the first frame update
     void Start()

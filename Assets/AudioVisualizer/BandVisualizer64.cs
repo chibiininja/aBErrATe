@@ -14,7 +14,7 @@ public class BandVisualizer64 : MonoBehaviour
             for (int j = 0; j < 8; j++)
             {
                 GameObject prefab = Instantiate(tile, transform);
-                prefab.transform.localPosition = new Vector3(i * 0.25f, j * 0.25f, 0);
+                prefab.transform.localPosition = new Vector3((i - 4) * 0.25f + 0.125f, (j - 4) * 0.25f + 0.125f, 0);
                 EmissionAudio emissionAudio = prefab.AddComponent<EmissionAudio>();
                 emissionAudio._band = j + i * 8;
                 emissionAudio._useBuffer = true;
