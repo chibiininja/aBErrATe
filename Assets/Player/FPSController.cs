@@ -34,6 +34,9 @@ public class FPSController : PortalTraveller {
     float lastGroundedTime;
     bool disabled;
 
+    [HideInInspector]
+    public Vector3 offset;
+
     void Start () {
         cam = Camera.main;
         if (lockCursor) {
@@ -77,7 +80,7 @@ public class FPSController : PortalTraveller {
         verticalVelocity -= gravity * Time.deltaTime;
         velocity = new Vector3 (velocity.x, verticalVelocity, velocity.z);
 
-        var flags = controller.Move (velocity * Time.deltaTime);
+        var flags = controller.Move (velocity * Time.deltaTime + offset);
         if (flags == CollisionFlags.Below) {
             jumping = false;
             lastGroundedTime = Time.time;
@@ -131,5 +134,4 @@ public class FPSController : PortalTraveller {
         velocity = toPortal.TransformVector (fromPortal.InverseTransformVector (velocity));
         Physics.SyncTransforms ();
     }
-
 }

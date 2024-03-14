@@ -102,6 +102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d94c2a84a7737d4cb133acdbb6ee02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioBand: []
+  _audioBandBuffer: []
+  _audioBand64: []
+  _audioBandBuffer64: []
+  _amplitude: 0
+  _amplitudeBuffer: 0
+  _audioProfile: 0
 --- !u!114 &1110960459461927009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063cab6d2882a00498ead727e8a00695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 63d5153bc88421e49bc982ffb2d44b45, type: 3}
+  shader: {fileID: 4800000, guid: a7ee498f306f5544888cc8d773bdc558, type: 3}
   cam: {fileID: 0}
   exposure: {x: 1, y: 1, z: 1}
   temperature: 0
@@ -169,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a78c6115c214d438374fb1cec7d2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: d92cc0f819893ca4a8fbb351dae87de1, type: 3}
+  shader: {fileID: 4800000, guid: 7f1c07b59b3a6804499be544abecc05b, type: 3}
   cam: {fileID: 0}
   colorPalette: {fileID: 2800000, guid: 0904de03151ef2a4eb622cad201df6ee, type: 3}
   invert: 0
@@ -191,5 +198,5 @@ MonoBehaviour:
   focalOffset: {x: 1, y: 1}
   radius: {x: 1, y: 1}
   hardness: 1
-  intensity: 3
+  intensity: 5
   channelOffsets: {x: 1, y: 0, z: -1}
