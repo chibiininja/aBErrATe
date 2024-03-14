@@ -145,3 +145,4 @@ MonoBehaviour:
   linkedRadius: 5
   offset: 1
   localVolumeAmplifier: 0.15
+  useDistance: 1

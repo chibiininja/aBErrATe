@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightAudio : MonoBehaviour
+public class LightAmplitude : MonoBehaviour
 {
     public float _startingIntensity = 1f;
     public float _newIntensity = 1.5f;

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 490616527096034497}
   - component: {fileID: 6738931743371044735}
   - component: {fileID: 9073240027745418972}
+  - component: {fileID: 508415307555553316}
   m_Layer: 0
   m_Name: Green
   m_TagString: MainCamera
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cbb919319eda941b2f4ec56a845ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 059fd336daa11d44f900ebfae5869066, type: 3}
+  shader: {fileID: 4800000, guid: 5d10a27a4d992d9408fe44d22e86928e, type: 3}
   cam: {fileID: 3846920821058747818}
   debugMask: 0
   focalOffset: {x: 1, y: 1}
@@ -200,3 +201,23 @@ MonoBehaviour:
   hardness: 1
   intensity: 5
   channelOffsets: {x: 1, y: 0, z: -1}
+--- !u!114 &508415307555553316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565943205310284634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e807a12073fa65c44bbe75f989160a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _band: 59
+  _useBand64: 1
+  _amplify: 1
+  threshold: 0.2
+  delay: 1.8
+  initialPalette: {fileID: 2800000, guid: e04ced2cffd94ae47a9cb66fb6a872b9, type: 3}
+  swappedPalette: {fileID: 2800000, guid: 55dbbee7b345c8049a0400ec3473747a, type: 3}
+  isSwapped: 0

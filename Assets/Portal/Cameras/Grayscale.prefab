@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cbb919319eda941b2f4ec56a845ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 059fd336daa11d44f900ebfae5869066, type: 3}
+  shader: {fileID: 4800000, guid: 5d10a27a4d992d9408fe44d22e86928e, type: 3}
   cam: {fileID: 3846920821058747818}
   debugMask: 0
   focalOffset: {x: 1, y: 1}

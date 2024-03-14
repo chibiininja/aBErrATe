@@ -15,6 +15,9 @@ public class Music : MonoBehaviour
     private float offset = 1f;
     [Range(0f, 1f)]
     public float localVolumeAmplifier = 0.15f;
+
+    [SerializeField]
+    private bool useDistance = true;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +30,9 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!useDistance)
+            return;
+
         float myDistance = (Camera.main.transform.position - myPortal.transform.position).magnitude;
         float linkedDistance = (Camera.main.transform.position - linkedPortal.transform.position).magnitude;
         if (myDistance < myRadius)
