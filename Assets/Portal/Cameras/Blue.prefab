@@ -218,6 +218,6 @@ MonoBehaviour:
   _amplify: 1
   threshold: 0.2
   delay: 1.8
-  initialPalette: {fileID: 2800000, guid: 0904de03151ef2a4eb622cad201df6ee, type: 3}
-  swappedPalette: {fileID: 2800000, guid: f6492f59c04301049b8f8899802eddad, type: 3}
+  darkPalette: {fileID: 2800000, guid: 0904de03151ef2a4eb622cad201df6ee, type: 3}
+  lightPalette: {fileID: 2800000, guid: f6492f59c04301049b8f8899802eddad, type: 3}
   isSwapped: 0
