@@ -8,8 +8,9 @@ public class Grounder : MonoBehaviour
     {
         if (other.tag == "Platform")
         {
-            Debug.Log("Enter");
-            other.GetComponent<PlatformThreshAudio>().player = transform.parent.GetComponent<FPSController>();
+            //Debug.Log("Enter");
+            if (other.TryGetComponent<PlatformThreshAudio>(out PlatformThreshAudio comp))
+                comp.player = transform.parent.GetComponent<FPSController>();
         }
     }
 
@@ -17,9 +18,10 @@ public class Grounder : MonoBehaviour
     {
         if (other.tag == "Platform")
         {
-            Debug.Log("Leave");
-            other.GetComponent<PlatformThreshAudio>().player = null;
-            transform.parent.GetComponent<FPSController>().offset = Vector3.zero;
+            //Debug.Log("Leave");
+            if (other.TryGetComponent<PlatformThreshAudio>(out PlatformThreshAudio comp))
+               comp.player = null;
+                transform.parent.GetComponent<FPSController>().offset = Vector3.zero;
         }
     }
 }

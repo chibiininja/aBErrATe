@@ -20,13 +20,13 @@ public class selectiveSystem
     {
         Remove(o);
         m_SelectiveObjs.Add(o);
-        Debug.Log("added effect " + o.gameObject.name);
+        //Debug.Log("added effect " + o.gameObject.name);
     }
 
     public void Remove(selectiveObj o)
     {
         m_SelectiveObjs.Remove(o);
-        Debug.Log("removed effect " + o.gameObject.name);
+        //Debug.Log("removed effect " + o.gameObject.name);
     }
 }
 

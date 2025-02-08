@@ -162,9 +162,9 @@ MonoBehaviour:
   tint: 0
   contrast: {x: 1, y: 1, z: 1}
   linearMidPoint: {x: 0.5, y: 0.5, z: 0.5}
-  brightness: {x: 0, y: 0, z: 0}
+  brightness: {x: 0.5, y: 0.2, z: 0.1}
   colorFilter: {r: 1, g: 1, b: 1, a: 0}
-  saturation: {x: 0, y: 0, z: 0}
+  saturation: {x: 0.25, y: 0, z: 0}
 --- !u!114 &6738931743371044735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _band: 59
   _useBand64: 1
-  _amplify: 1
+  _amplify: 0.5
   threshold: 0.2
   delay: 1.8
   darkPalette: {fileID: 2800000, guid: 213488218968d234db7d4ee1a6aeee56, type: 3}

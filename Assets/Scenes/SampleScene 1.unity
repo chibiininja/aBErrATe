@@ -5870,9 +5870,7 @@ GameObject:
   - component: {fileID: 436417349}
   - component: {fileID: 436417348}
   - component: {fileID: 436417347}
-  - component: {fileID: 436417346}
   - component: {fileID: 436417350}
-  - component: {fileID: 436417351}
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
@@ -5895,23 +5893,6 @@ Transform:
   m_Father: {fileID: 1295841010}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!114 &436417346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436417344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf22d03d806c3647b28993aedb40e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 7
-  _useBuffer: 1
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 0, b: 0.7490196, a: 1}
 --- !u!64 &436417347
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5996,27 +5977,6 @@ MonoBehaviour:
   _newIntensity: {r: 1, g: 1, b: 1, a: 1}
   threshold: 0.2
   delay: 0.4
-  transitionTime: 0.2
---- !u!114 &436417351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436417344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc518eea9126f1448d9eb87bb2ec8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 0
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _startingIntensity: {r: 0, g: 0, b: 0, a: 1}
-  _newIntensity: {r: 1, g: 1, b: 1, a: 1}
-  threshold: 0.2
-  delay: 1.8
   transitionTime: 0.2
 --- !u!1 &444596019
 GameObject:
@@ -18702,6 +18662,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1535381019623673787, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
+      propertyPath: rotationSmoothTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1662247539307503370, guid: 2a693c18748220d47b87c6813f55b269, type: 3}
       propertyPath: shader
       value: 
@@ -19639,9 +19603,7 @@ GameObject:
   - component: {fileID: 1563558029}
   - component: {fileID: 1563558028}
   - component: {fileID: 1563558027}
-  - component: {fileID: 1563558026}
   - component: {fileID: 1563558030}
-  - component: {fileID: 1563558031}
   m_Layer: 0
   m_Name: Plane (4)
   m_TagString: Untagged
@@ -19664,23 +19626,6 @@ Transform:
   m_Father: {fileID: 1295841010}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!114 &1563558026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563558024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf22d03d806c3647b28993aedb40e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 7
-  _useBuffer: 1
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 0, b: 0.7490196, a: 1}
 --- !u!64 &1563558027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19765,27 +19710,6 @@ MonoBehaviour:
   _newIntensity: {r: 1, g: 1, b: 1, a: 1}
   threshold: 0.2
   delay: 0.4
-  transitionTime: 0.2
---- !u!114 &1563558031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1563558024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc518eea9126f1448d9eb87bb2ec8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 0
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _startingIntensity: {r: 0, g: 0, b: 0, a: 1}
-  _newIntensity: {r: 1, g: 1, b: 1, a: 1}
-  threshold: 0.2
-  delay: 1.8
   transitionTime: 0.2
 --- !u!1 &1572511306
 GameObject:
@@ -24562,9 +24486,7 @@ GameObject:
   - component: {fileID: 1923804488}
   - component: {fileID: 1923804487}
   - component: {fileID: 1923804486}
-  - component: {fileID: 1923804485}
   - component: {fileID: 1923804489}
-  - component: {fileID: 1923804490}
   m_Layer: 0
   m_Name: Plane (3)
   m_TagString: Untagged
@@ -24587,23 +24509,6 @@ Transform:
   m_Father: {fileID: 1295841010}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!114 &1923804485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923804483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf22d03d806c3647b28993aedb40e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 7
-  _useBuffer: 1
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 0, b: 0.7490196, a: 1}
 --- !u!64 &1923804486
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -24688,27 +24593,6 @@ MonoBehaviour:
   _newIntensity: {r: 1, g: 1, b: 1, a: 1}
   threshold: 0.2
   delay: 0.4
-  transitionTime: 0.2
---- !u!114 &1923804490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923804483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc518eea9126f1448d9eb87bb2ec8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 0
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _startingIntensity: {r: 0, g: 0, b: 0, a: 1}
-  _newIntensity: {r: 1, g: 1, b: 1, a: 1}
-  threshold: 0.2
-  delay: 1.8
   transitionTime: 0.2
 --- !u!1 &1930772105
 GameObject:
@@ -25378,9 +25262,7 @@ GameObject:
   - component: {fileID: 1990166095}
   - component: {fileID: 1990166094}
   - component: {fileID: 1990166093}
-  - component: {fileID: 1990166092}
   - component: {fileID: 1990166096}
-  - component: {fileID: 1990166097}
   m_Layer: 0
   m_Name: Plane (5)
   m_TagString: Untagged
@@ -25403,23 +25285,6 @@ Transform:
   m_Father: {fileID: 1295841010}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!114 &1990166092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990166090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf22d03d806c3647b28993aedb40e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 7
-  _useBuffer: 1
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 0, b: 0.7490196, a: 1}
 --- !u!64 &1990166093
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25504,27 +25369,6 @@ MonoBehaviour:
   _newIntensity: {r: 1, g: 1, b: 1, a: 1}
   threshold: 0.2
   delay: 0.4
-  transitionTime: 0.2
---- !u!114 &1990166097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990166090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcc518eea9126f1448d9eb87bb2ec8c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _band: 0
-  _useBand64: 0
-  _amplify: 1
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _startingIntensity: {r: 0, g: 0, b: 0, a: 1}
-  _newIntensity: {r: 1, g: 1, b: 1, a: 1}
-  threshold: 0.2
-  delay: 1.8
   transitionTime: 0.2
 --- !u!1001 &2001858571
 PrefabInstance:

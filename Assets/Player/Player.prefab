@@ -56,9 +56,10 @@ MonoBehaviour:
   lockCursor: 1
   mouseSensitivity: 10
   pitchMinMax: {x: -40, y: 85}
-  rotationSmoothTime: 0.1
+  rotationSmoothTime: 0.02
   yaw: 0
   pitch: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!143 &1535381019623673733
 CharacterController:
   m_ObjectHideFlags: 0
